@@ -1,0 +1,558 @@
+@import 'variables';
+@import 'mixsins';
+@import './projects.scss';
+@import './blog.scss';
+@import './contact.scss';
+@import './about.scss';
+
+
+@font-face {
+  font-family: 'Cairo';
+  src: url(../fonts/Cairo-Regular.ttf);
+}
+@font-face {
+  font-family: 'ReadexPro';
+  src: url(../fonts/ReadexPro-Regular.ttf);
+}
+@font-face {
+  font-family: 'PFont';
+  src: url(../fonts/HindMadurai-Regular.ttf);
+}
+
+body {
+  font-family: 'ReadexPro',
+    'Cambria, Cochin, Georgia, Times, Times New Roman, serif' !important;
+
+    .container-fluid {
+      padding: 0;
+      overflow-x: hidden;
+    }
+}
+
+/* Start Navbar */
+.top-menu {
+  .navbar {
+    font-weight: bold;
+    //background-color: #ff5200;
+    .navbar-brand {
+      margin-left: 25px;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+    }
+    .navbar-nav {
+      li > a {
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        
+        &:hover {
+          background-color: $customColor;
+          border-bottom: 1px solid $mainColor;
+          color: $mainColor;
+        }
+
+        &.active {
+          border-bottom: 1px solid $mainColor;
+          color: $mainColor;
+        }
+      }
+    }
+    button {
+      margin-left: 30px;
+      &:focus {
+        border: 2px solid #000;
+        box-shadow: none;
+      }
+    }
+  }
+}
+/* End Navbar */
+
+/* Start CarouselTop */
+.carousel-top {
+  .row {
+    display: block;
+  }
+  .carousel {
+    .carousel-indicators {
+      li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 20px 5px 0 0;
+
+        &.active {
+          background-color: $mainColor;
+        }
+      }
+    }
+    .carousel-item {
+      img {
+        height: 450px;
+      }
+      .carousel-caption {
+        h1 {
+          font-weight: bold;
+          margin-bottom: 50px;
+        }
+        h4 {
+          width: 60%;
+          color: $customColor;
+          line-height: 35px;
+          font-family: 'PFont';
+        }
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(65, 115, 115, 0.5);
+        z-index: 0;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+      }
+    }
+  }
+}
+.custom-btn {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: $mainColor;
+  border-color: $mainColor;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $mainColor;
+    color: $customColor;
+    border: 1px solid $customColor;
+    box-shadow: none;
+  }
+}
+/* End CarouselTop */
+
+/* Start Who-Us */
+h2 {
+  font-weight: bold;
+  color: #000;
+}
+.custom-paragraph {
+  color: #333;
+  margin: 15px auto;
+  line-height: 2em;
+  font-family: 'PFont';
+  font-size: 18px;
+  a {
+    color: $mainColor;
+    text-decoration: none;
+  }
+}
+.custom-btn2 {
+  background-color: $mainColor;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px 65px;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #000;
+    box-shadow: none;
+  }
+}
+/* End Who-Us */
+
+/* Start lastest-projects */
+.lastest-projects {
+  background-color: rgb(255, 255, 204);
+  #latest-company-projects-1,
+  #latest-company-projects-2 {
+    width: 75.5%;
+    .thumbnail {
+      position: relative;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      .caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        height: 100%;
+        max-width: 100%;
+        padding: 2%;
+        text-align: center;
+        color: #fff;
+        display: none;
+      }
+      .project-category {
+        position: absolute;
+        left: 0;
+        top: 5%;
+        font-weight: bold;
+        background-color: rgba(240, 240, 240, 0.75);
+        padding: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0px 5px 20px 0px #202020;
+      }
+    }
+    button.carousel-control-prev {
+      left: -5%;
+      color: #252222;
+      width: 0;
+    }
+    button.carousel-control-next {
+      right: -5%;
+      color: #252222;
+      width: 0;
+    }
+  }
+}
+.project-detials {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* End lastest-projects */
+
+/* Start opinions */
+.opinions {
+  #opinions-slider {
+    .carousel-item {
+      img {
+        width: 100px;
+        height: 100px;
+        margin: 20px 0;
+        border-radius: 10px;
+      }
+    }
+    button.carousel-control-prev {
+      left: 7%;
+      color: #252222;
+      width: 0;
+    }
+    button.carousel-control-next {
+      right: 7%;
+      color: #252222;
+      width: 0;
+    }
+  }
+}
+/* End opinions */
+
+/* Start Customers */
+.clients {
+  background-color: #659dbd;
+  h2 {
+    color: #fff;
+  }
+}
+/* End Customers */
+
+/* Start newest-blogs */
+.newest-blogs {
+  .card-body {
+    width: 90%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    top: -17px;
+    right: -5%;
+  }
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .card-text {
+    font-size: 14px;
+  }
+}
+/* Start newest-blogs */
+
+/* Start Footer */
+footer {
+  background-color: #393939;
+  padding-bottom: 70px;
+  h5 {
+    color: #fff;
+    @include theFooterLine(110px, 15px);
+  }
+  #footerNavLinks {
+    .navbar {
+      .navbar-nav {
+        flex-flow: row;
+        a.nav-link {
+          color: #bbb;
+          font-size: 15 px;
+          text-decoration: underline;
+          &:hover,
+          &:focus,
+          &:active {
+            color: $customColor;
+          }
+        }
+      }
+    }
+  }
+  .custom-heading {
+    margin-top: 15px;
+  }
+  .form {
+    width: 35%;
+    margin-bottom: 35px;
+    input {
+      background-color: #202020;
+      border-radius: 1px;
+      border: 0;
+      color: #fff;
+      &:focus {
+        background-color: #202020;
+        border-color: $customColor;
+        box-shadow: 0 0 2px 0 $customColor;
+        color: $customColor;
+      }
+    }
+    .btn-light {
+      border-radius: 0;
+      &:hover,
+      &:focus {
+        color: $customColor;
+        background-color: #363636;
+        border: 1px solid $customColor;
+        transition-property: border, color, background-color;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+  .l-link {
+    a {
+      color: #969696;
+      &:hover,
+      &:active {
+        color: $customColor;
+      }
+    }
+  }
+  .copyright {
+    color: #969696;
+    margin-top: 5px;
+
+    a {
+      color: #969696;
+      &:hover {
+        color: $customColor;
+      }
+    }
+
+    .fa-copyright {
+      margin-top: 4px;
+      margin-left: 2px;
+    }
+  }
+}
+.line {
+  @include theFooterLine(60%, 0px);
+}
+/* End Footer */
+
+/* Start Responsive */
+@media (min-width: 991.5px) and (max-width: 1199.5px) {
+  .lastest-projects {
+    #latest-company-projects-1 {
+      .thumbnail {
+        .caption {
+          h5 {
+            font-size: 14px;
+          }
+          .project-detials {
+            font-size: 12px;
+          }
+          .custom-btn {
+            padding: 5px 10px;
+            font-weight: normal;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991.5px) {
+  .top-menu {
+    .navbar {
+      padding: 15px 0;
+
+      .navbar-brand {
+        margin-left: 0px;
+        margin-right: 28px;
+      }
+
+      .navbar-nav {
+        li > a {
+          padding-left: 5px;
+          border-bottom: none !important;
+          margin-left: 23px !important;
+        }
+      }
+      .navbar-brand {
+        margin-left: 0 !important;
+      }
+    }
+  }
+  .carousel-top {
+    .carousel {
+      .carousel-item {
+        .carousel-caption {
+          h1 {
+            font-size: 29px;
+          }
+          h4 {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .form {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 767.5px) {
+  .carousel-top {
+    .carousel {
+      .carousel-item {
+        .carousel-caption {
+          h1 {
+            font-size: 24px;
+          }
+          h4 {
+            width: 75%;
+            font-size: 18px;
+            line-height: 27px;
+          }
+        }
+      }
+    }
+  }
+  .clients {
+    .col-sm-6 {
+      margin-bottom: 15px;
+    }
+  }
+  footer {
+    .form {
+      width: 60%;
+    }
+  }
+}
+@media (max-width: 575.5px) {
+  .lastest-projects {
+    #latest-company-projects-2 {
+      button.carousel-control-prev {
+        left: -10%;
+      }
+      button.carousel-control-next {
+        right: -10%;
+      }
+    }
+  }
+  .clients {
+    h2 {
+      padding-bottom: 24px !important;
+    }
+  }
+  footer {
+    #footerNavLinks {
+      .navbar {
+        .navbar-nav {
+          flex-flow: column;
+          padding-bottom: 10px;
+          li {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+    .form {
+      width: 80%;
+      .input-group-lg > .btn,
+      .input-group-lg > .form-control {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// For Iphone 5/SE ,Galaxy Fold and Galaxy S5
+@media (max-width: 405.5px) {
+  .carousel-top {
+    .carousel {
+      .carousel-item {
+        .carousel-caption {
+          h1 {
+            font-size: 18px;
+          }
+          h4 {
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  .custom-btn {
+    padding: 8px 16px;
+  }
+  .custom-btn2 {
+    padding: 15px 30px;
+  }
+  .lastest-projects {
+    #latest-company-projects-2 {
+      .thumbnail {
+        .caption {
+          h5 {
+            font-size: 12px;
+          }
+          p {
+            font-size: 10px;
+            margin-bottom: 3px;
+          }
+          .custom-btn {
+            padding: 5px 10px;
+          }
+        }
+      }
+      .project-category {
+        font-size: 12px;
+        padding: 5px !important;
+      }
+    }
+  }
+  .opinions {
+    .carousel-item {
+      h4 {
+        font-size: 19px;
+      }
+    }
+  }
+  .copyright {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 306.5px) {
+  .copyright {
+    font-size: 13px;
+  }
+}
+/* End Responsive */

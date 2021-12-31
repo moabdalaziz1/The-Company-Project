@@ -1,0 +1,121 @@
+.banner {
+  #banner-img {
+    height: 250px;
+    background-image: url(../images/projects-banner.jpg);
+    background-position: 50% 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .overlay {
+    position: relative;
+    background-color: rgba(65, 115, 115, 0.5);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title1 {
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.projects {
+  .project-category {
+    a {
+      background-color: #fff;
+      color: #000;
+      padding: 5px 10px;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        background-color: $mainColor;
+        color: $customColor;
+        transition-property: color, background-color;
+        transition-duration: 0.3s;
+      }
+    }
+  }
+
+  .card-title {
+    font-weight: bold;
+    color: #000;
+  }
+}
+
+/****************************************** The Project Details Page ******************************************/
+.btn,
+button {
+  &:focus,
+  &:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+#image-gallery {
+  .modal-footer {
+    display: block;
+  }
+}
+
+.thumb {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.Project-details {
+  .pro-det {
+    .title {
+      h4 {
+        color: $mainColor;
+        font-weight: bold;
+      }
+      .date {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.5px) {
+  .banner {
+    .title1 {
+      font-size: 23px;
+    }
+  }
+}
+/*Responsive for very small screens like Galaxy Flod ( Project Details Page ) */
+@media (max-width: 390px) {
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .Project-details {
+    .pro-det {
+      .title {
+        h4 {
+          font-size: 18px;
+        }
+        .date {
+          margin-bottom: 10px;
+        }
+      }
+      .custom-btn {
+        font-size: 14px;
+      }
+      .card-text {
+        font-size: 14px;
+      }
+    }
+  }
+}

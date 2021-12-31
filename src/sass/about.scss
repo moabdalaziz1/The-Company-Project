@@ -1,0 +1,49 @@
+.banner-about {
+  #banner-img {
+    background-image: url(../images/banner-about.jpg);
+  }
+}
+
+.about-us {
+  .custom-paragraph {
+    line-height: 30px;
+  }
+
+  .card {
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 20px auto;
+    }
+
+    .card-body {
+      padding-top: 0;
+    }
+
+    .job-title {
+      color: $cardTextColor;
+        
+      &::after {
+        content: '';
+        border: 1px solid $mainColor;
+        background-color: $mainColor;
+        display: block;
+        width: 30px;
+        margin: 10px auto;
+      }
+    }
+
+    .card-text {
+      color: $cardTextColor;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    .emp-social {
+      .social {
+        margin-bottom: 4px;
+      }
+    }
+    
+  }
+}

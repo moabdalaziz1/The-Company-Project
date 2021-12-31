@@ -1,0 +1,11 @@
+@mixin theFooterLine($width, $mt) {
+  &::after {
+    content: '';
+    border: 1px solid #fff;
+    background-color: #fff;
+    display: block;
+    width: $width;
+    margin: 0 auto;
+    margin-top: $mt;
+  }
+}
